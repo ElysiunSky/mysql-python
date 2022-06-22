@@ -1,0 +1,45 @@
+create database cursos;
+use cursos;
+
+create table assuntos(
+id INT PRIMARY KEY AUTO_INCREMENT,
+nome VARCHAR(70));
+
+create table cursos(
+id INT PRIMARY KEY AUTO_INCREMENT,
+nome VARCHAR(70),
+id_assunto INT,
+link VARCHAR(70),
+FOREIGN KEY (id_assunto) references assuntos(id));
+
+select * from  assuntos join cursos on id_assunto = assuntos.id;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+show tables;
+use cursos;
+select * from assuntos;
+select * from cursos;
+insert into assuntos(id, nome) values('2','ti');
+insert into cursos(id,nome,link) values('3','Ciencias Da Computação', 'www.Cienciasdacomputacao.com.br');
+UPDATE assuntos SET nome = 'asdfd' WHERE id = 4;
+
+
+
+ 
+ 
